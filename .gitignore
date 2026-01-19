@@ -1,0 +1,9 @@
+# Scoop
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
