@@ -5,8 +5,8 @@
   "license": "MIT OR Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/gonewton/newton/releases/download/v0.1.0/newton-x86_64-pc-windows-msvc.zip",
-      "hash": "placeholder_sha256",
+      "url": "https://github.com/gonewton/newton/releases/download/v0.3.6/newton-x86_64-pc-windows-msvc.zip",
+      "hash": "adc807461b4887c9ef525420796d23dddf1346095ad93894a13154702ab8e59f",
       "bin": "newton.exe"
     }
   },
