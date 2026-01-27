@@ -5,8 +5,13 @@
   "license": "MIT OR Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/gonewton/newton/releases/download/v0.3.6/newton-x86_64-pc-windows-msvc.zip",
-      "hash": "adc807461b4887c9ef525420796d23dddf1346095ad93894a13154702ab8e59f",
+      "url": "https://github.com/gonewton/newton/releases/download/v0.4.0/newton-x86_64-pc-windows-msvc.zip",
+      "hash": "d8d13a9b107f1c1872b395811c33a40d42a22dde923925e17f8f73ba251716a7",
+      "bin": "newton.exe"
+    },
+    "arm64": {
+      "url": "https://github.com/gonewton/newton/releases/download/v0.4.0/newton-x86_64-pc-windows-msvc.zip",
+      "hash": "d8d13a9b107f1c1872b395811c33a40d42a22dde923925e17f8f73ba251716a7",
       "bin": "newton.exe"
     }
   },
@@ -17,9 +22,10 @@
     "architecture": {
       "64bit": {
         "url": "https://github.com/gonewton/newton/releases/download/v$version/newton-x86_64-pc-windows-msvc.zip"
+      },
+      "arm64": {
+        "url": "https://github.com/gonewton/newton/releases/download/v$version/newton-x86_64-pc-windows-msvc.zip"
       }
     }
-  },
-  "url": "https://github.com/gonewton/newton/releases/download/v0.4.0/newton-x86_64-pc-windows-msvc.zip",
-  "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
 }
