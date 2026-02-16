@@ -68,7 +68,7 @@ MANIFEST_FILE="bucket/${TOOL}.json"
 jq --arg version "$VERSION_CLEAN" \
    --arg url "$WINDOWS_URL" \
    --arg hash "$WINDOWS_SHA" \
-   '.version = $version | .url = $url | .hash = $hash' \
+   '.version = $version | .architecture."64bit".url = $url | .architecture."64bit".hash = $hash' \
    "$MANIFEST_FILE" > "${MANIFEST_FILE}.tmp"
 
 mv "${MANIFEST_FILE}.tmp" "$MANIFEST_FILE"
