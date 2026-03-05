@@ -58,9 +58,19 @@ if [ "$(echo "$RELEASE_DATA" | jq -r '.message')" = "Not Found" ]; then
   exit 1
 fi
 
-# Extract Windows download URL and SHA256
+# Extract Windows download URL (single asset; prefer msvc)
 WINDOWS_URL=$(echo "$RELEASE_DATA" | jq -r '.assets[] | select(.name | contains("windows")) | .browser_download_url' | head -1)
-WINDOWS_SHA=$(echo "$RELEASE_DATA" | jq -r '.assets[] | select(.name | contains("windows")) | .browser_download_url' | xargs curl -s | sha256sum | cut -d' ' -f1)
+if [ -z "$WINDOWS_URL" ] || [ "$WINDOWS_URL" = "null" ]; then
+  echo "No Windows asset found for release $VERSION. GitHub may still be indexing assets; retry the workflow or run Update Package Managers manually."
+  exit 1
+fi
+# Hash the same URL we use in the manifest (avoid race where API lists no assets yet)
+WINDOWS_SHA=$(curl -sL "$WINDOWS_URL" | sha256sum | cut -d' ' -f1)
+EMPTY_HASH="e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+if [ "$WINDOWS_SHA" = "$EMPTY_HASH" ]; then
+  echo "Downloaded asset is empty. GitHub may still be serving the new asset; retry the workflow or run Update Package Managers manually."
+  exit 1
+fi
 
 # Update JSON manifest
 MANIFEST_FILE="bucket/${TOOL}.json"
