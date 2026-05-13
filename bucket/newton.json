@@ -1,12 +1,12 @@
 {
-  "version": "0.5.94",
+  "version": "0.5.95",
   "description": "Rust implementation of Newton Loop optimization framework with 100% Python compatibility",
   "homepage": "https://github.com/gonewton/newton",
   "license": "MIT OR Apache-2.0",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/gonewton/newton/releases/download/v0.5.94/newton-x86_64-pc-windows-msvc.zip",
-      "hash": "1417e01a4b4cc0303cffff58679f06c293aaa6c2e18d2d2a4af58e4f5abeb5d7",
+      "url": "https://github.com/gonewton/newton/releases/download/v0.5.95/newton-x86_64-pc-windows-msvc.zip",
+      "hash": "c9ac703320858e7e2fec723064f627fa39332a9b9fb0fbbd34ffb1763018c77d",
       "bin": "newton.exe"
     }
   },
