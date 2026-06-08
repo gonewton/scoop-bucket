@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/gonewton/newton/releases/download/v0.5.114/newton-x86_64-pc-windows-msvc.zip",
-      "hash": "58f29e51c2da3111f5b2ecf5e9deb1a86fdc869a52fb600dd610ab1f599dc5ba",
+      "hash": "e6ac86b7a9bc0c4de40c9eb1ee033ede8bf6b2c2b688d322f6993d03a773b15e",
       "bin": "newton.exe"
     }
   },
